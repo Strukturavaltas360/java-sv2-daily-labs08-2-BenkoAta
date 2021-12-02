@@ -11,6 +11,7 @@ public class DailyValue {
         st = line.substring(6, 8).trim();
         maxTemp = Integer.parseInt(st);
         st = line.substring(12, 14).trim();
+        minTemp = Integer.parseInt(st);
     }
 
     public DailyValue(int day, int maxTemp, int minTemp) {
