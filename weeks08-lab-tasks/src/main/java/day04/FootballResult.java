@@ -1,16 +1,15 @@
 package day04;
 
-public class FootballResult {
+public class FootballResult extends Base {
     private String team;
     private int goalsF;
     private int goalsA;
 
     public FootballResult(String line) {
         team = line.substring(7, 23).trim();
-        goalsF = Integer.parseInt(line.substring(43, 45).trim());
-        goalsA = Integer.parseInt(line.substring(50, 52).trim());
+        goalsF = readInt(line, 43, 45);
+        goalsA = readInt(line, 50, 52);
     }
-
     public int getDifference() {
         return goalsF - goalsA;
     }
